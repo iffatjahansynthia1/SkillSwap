@@ -22,7 +22,6 @@ Many students and professionals seek to acquire new skills or enhance existing o
 Existing learning platforms primarily focus on structured courses, often overlooking the potential of peer-to-peer learning. SkillSwap addresses this gap by enabling individuals to connect, learn, and share knowledge directly with others. The project will incorporate key principles of database design, matchmaking algorithms, and user interface development to create an efficient skill exchange platform.
 
 
-
 Project Objectives
 Skill-Based Matching – Develop a keyword-based algorithm to connect users based on the skills they offer and wish to learn, while considering their availability.
 User Engagement Features – Design essential features such as user profiles, skill listings, and session scheduling to facilitate seamless interaction.
@@ -43,15 +42,20 @@ Feedback & Rating System – After each session, users can rate their experience
 Innovative Aspects
 Reciprocal Learning Model – Every user has the opportunity to be both a learner and a teacher, fostering a dynamic and collaborative learning experience.
 Affordable & Accessible – The platform facilitates direct peer connections, eliminating costly learning fees and making knowledge-sharing more inclusive.
+
 System Architecture
 SkillSwap will be developed using a three-tier architecture:
 Client Tier: The frontend (HTML & CSS) will handle user interactions and display information.
 Application Tier: The backend (PHP) will process requests, handle authentication, and manage business logic.
 Data Tier: MySQL will store user profiles, skills, schedules, and feedback data securely.
+
+
 Expected Challenges & Risks
 User Adoption – Attracting initial users and encouraging engagement will be a challenge. Mitigation: Launching with an active community and success stories.
 Data Privacy – Ensuring the security of user data is crucial. Mitigation: Implementing strong authentication mechanisms and security best practices.
 Matching Algorithm Efficiency – The accuracy of the skill-matching algorithm will impact user satisfaction. Mitigation: Refining the algorithm based on user feedback.
+
+
 Expected Outcomes
 By the end of the project, we aim to develop a fully functional prototype of SkillSwap, which will include:
 User registration, login, and profile management.
@@ -59,37 +63,39 @@ A system for listing offered and desired skills.
 A keyword-based matching algorithm for skill pairing.
 Session scheduling and an in-platform messaging system.
 A post-session rating and feedback mechanism.
+
+
 User Survey Form
 Requirement Collection on A Peer-to-Peer Learning Platform
 Section 1: User Background
 What is your primary occupation?
- Teacher
- Student
- Freelancer
- Other
+Teacher
+Student
+Freelancer
+Other
 Have you ever used a peer-to-peer learning platform before?
- Yes
- No
+Yes
+No
 Section 2: Platform Interest & Use Case
 What type of skills are you most interested in learning?
 Educational
- Technical
- Soft Skills
- Language
- Other
+Technical
+Soft Skills
+Language
+Other
 Would you prefer a structured course format or flexible peer-to-peer learning?
 Structured
- Peer-to-peer
- Both
+Peer-to-peer
+Both
 Section 3: Platform Features
 What feature do you find most important in a learning platform?
 Finding the right learning partner
- Easy scheduling
- Chat/Messaging
- Feedback & Ratings
- Other
+Easy scheduling
+Chat/Messaging
+Feedback & Ratings
+Other
 How important is a rating/feedback system in assessing peer tutors?
- (Scale 1-5)
+(Scale 1-5)
 
 Would you like the ability to filter matches based on availability?
 Yes
@@ -102,7 +108,7 @@ What would motivate you to use SkillSwap regularly?
 Better learning experience
 Networking opportunities
 Free learning
- Teaching experience
+Teaching experience
 Other
 Section 5: Privacy & Security
 How concerned are you about data privacy on such platforms?
@@ -110,8 +116,8 @@ How concerned are you about data privacy on such platforms?
 What personal information would you feel comfortable sharing on your profile?
 Name
 Contact Details
- Personal Details
- Skills/Educational Background
+Personal Details
+Skills/Educational Background
 None
 Section 6: General Feedback
 Would you recommend such a platform to others?
