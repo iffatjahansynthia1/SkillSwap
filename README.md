@@ -2,15 +2,20 @@ Project Proposal & Questionnaire
 CSE 3200 
 Design Project II
 
+
 DEV3:
+
 Mohammed Radihan Navid (213014002)
 Talal Bin Akbor (213014025)
 Stephen Alden Peris (213014057)
 Iffat Jahan Synthia (213014006)
 Mst. Rifah Sadia Joti (221014010)
+
 SkillSwap
 A Peer-to-Peer Learning Platform
+
 Introduction
+
 This document proposes the development of SkillSwap, a web-based peer-to-peer learning platform. SkillSwap aims to provide an accessible and cost-effective way for individuals to exchange knowledge and skills in a collaborative learning environment.
 Problem Statement
 Many students and professionals seek to acquire new skills or enhance existing ones to improve their academic and career prospects. However, access to quality learning resources is often limited by high costs, geographical constraints, or a lack of personalized learning experiences.
@@ -61,7 +66,7 @@ What is your primary occupation?
  Teacher
  Student
  Freelancer
- Other__________
+ Other
 Have you ever used a peer-to-peer learning platform before?
  Yes
  No
@@ -71,7 +76,7 @@ Educational
  Technical
  Soft Skills
  Language
- Other__________
+ Other
 Would you prefer a structured course format or flexible peer-to-peer learning?
 Structured
  Peer-to-peer
@@ -82,7 +87,7 @@ Finding the right learning partner
  Easy scheduling
  Chat/Messaging
  Feedback & Ratings
- Other__________
+ Other
 How important is a rating/feedback system in assessing peer tutors?
  (Scale 1-5)
 
@@ -98,7 +103,7 @@ Better learning experience
 Networking opportunities
 Free learning
  Teaching experience
-Other__________
+Other
 Section 5: Privacy & Security
 How concerned are you about data privacy on such platforms?
 (Scale 1-5)
