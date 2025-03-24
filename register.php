@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 require_once 'includes/db.php';
 require_once 'classes/User.php';
@@ -30,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <?php include 'includes/header.php'; ?>
 
 <main>
+    <div class="background-image"></div> <!-- Add background image div -->
     <h1>Register</h1>
     <?php if($error): ?>
         <p class="error"><?php echo $error; ?></p>
@@ -51,3 +52,57 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
+<style>
+    /* Background image with filter effect */
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/brain.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px) brightness(0.8) contrast(1.2); /* Apply filter only to the image */
+        z-index: -1; /* Place the background behind the form */
+    }
+
+    main {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1, .error, form {
+        color: white; /* Adjust color for better readability */
+        z-index: 2; /* Ensure content stays on top */
+    }
+
+    form {
+        background: rgba(0, 0, 0, 0.5); /* Add some opacity for better contrast */
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    label, input, button {
+        display: block;
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
