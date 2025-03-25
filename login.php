@@ -1,7 +1,7 @@
 <?php 
 session_start();
-require_once __DIR__ . '/includes/db.php';
-require_once __DIR__ . '/classes/User.php';
+require_once 'includes/db.php';
+require_once 'classes/User.php';
 
 $error = '';
 
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<?php include __DIR__ . '/..includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <div class="background-image"></div>

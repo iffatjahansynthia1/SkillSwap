@@ -5,8 +5,8 @@ if(!isset($_SESSION['user_id'])){
     exit;
 }
 
-require_once __DIR__ . '/.. includes/db.php';
-require_once __DIR__ . '/..classes/Message.php';
+require_once 'includes/db.php';
+require_once 'classes/Message.php';
 
 $db = (new Database())->getConnection();
 $messageObj = new Message($db);
@@ -53,4 +53,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <?php endif; ?>
 </main>
 
-<?php include __DIR__ . '/..includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

@@ -5,8 +5,8 @@ if(!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require_once __DIR__ . '/..includes/db.php';
-require_once __DIR__ . '/..classes/Tutorial.php';
+require_once 'includes/db.php';
+require_once 'classes/Tutorial.php';
 
 $db = (new Database())->getConnection();
 $tutorialObj = new Tutorial($db);
@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 ?>
 
-<?php include __DIR__ . '/..includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <h1>Edit Tutorial</h1>
@@ -54,4 +54,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     </form>
 </main>
 
-<?php include __DIR__ . '/..includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

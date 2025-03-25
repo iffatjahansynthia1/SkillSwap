@@ -5,9 +5,9 @@ if(!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require_once __DIR__ . '/..includes/db.php';
-require_once __DIR__ . '/..classes/User.php';
-require_once __DIR__ . '/.. classes/Tutorial.php';
+require_once 'includes/db.php';
+require_once 'classes/User.php';
+require_once 'classes/Tutorial.php';
 
 $db = (new Database())->getConnection();
 $userObj = new User($db);
@@ -60,4 +60,4 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     <?php endif; ?>
 </main>
 
-<?php include __DIR__ . '/..includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>
