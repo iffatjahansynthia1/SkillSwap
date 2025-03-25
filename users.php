@@ -21,7 +21,7 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
 });
 ?>
 
-<?php include __DIR__ . '/..includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <h1>My Account</h1>

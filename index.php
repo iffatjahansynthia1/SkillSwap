@@ -153,7 +153,7 @@ $tutorials = $tutorialObj->getAllTutorials();
         <?php foreach($tutorials as $index => $tutorial): ?>
             <div class="tutorial">
                 <?php
-                    $images = ['/images/desktop.jpg', '/images/white.jpg', '/images/watercolor.jpg'];
+                    $images = ['images/desktop.jpg', 'images/white.jpg', 'images/watercolor.jpg'];
                     $imageSrc = $images[$index % 3];
                 ?>
                 <img src="<?php echo $imageSrc; ?>" alt="Tutorial Image">
