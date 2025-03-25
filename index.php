@@ -11,7 +11,7 @@ $tutorialObj = new Tutorial($db);
 $tutorials = $tutorialObj->getAllTutorials();
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include __DIR__ . '/..includes/header.php'; ?>
 
 <style>
     body {
@@ -172,4 +172,4 @@ $tutorials = $tutorialObj->getAllTutorials();
     </div>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/..includes/footer.php'; ?>

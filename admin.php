@@ -5,8 +5,8 @@ if(!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'admin'){
     exit;
 }
 
-require_once 'includes/db.php';
-require_once 'classes/Admin.php';
+require_once __DIR__ . '/..includes/db.php';
+require_once __DIR__ . '/..classes/Admin.php';
 
 $db = (new Database())->getConnection();
 $adminObj = new Admin($db);
@@ -15,7 +15,7 @@ $users = $adminObj->getAllUsers();
 $tutorials = $adminObj->getAllTutorials();
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include __DIR__ . '/..includes/header.php'; ?>
 
 <main>
     <h1>Admin Dashboard</h1>
@@ -67,4 +67,4 @@ $tutorials = $adminObj->getAllTutorials();
     </table>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/..includes/footer.php'; ?>

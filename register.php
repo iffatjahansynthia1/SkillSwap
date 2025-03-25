@@ -1,7 +1,7 @@
 <?php 
 session_start();
-require_once 'includes/db.php';
-require_once 'classes/User.php';
+require_once __DIR__ . '/.. includes/db.php';
+require_once __DIR__ . '/.. classes/User.php';
 
 $error = '';
 
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include __DIR__ . '/.. includes/header.php'; ?>
 
 <main>
     <div class="background-image"></div> <!-- Add background image div -->
@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     </form>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/..includes/footer.php'; ?>
 
 <style>
     /* Background image with filter effect */

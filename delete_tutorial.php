@@ -10,8 +10,8 @@ if(!isset($_GET['tutorial_id'])){
     exit;
 }
 
-require_once 'includes/db.php';
-require_once 'classes/Tutorial.php';
+require_once __DIR__ . '/..includes/db.php';
+require_once __DIR__ . '/..classes/Tutorial.php';
 
 $db = (new Database())->getConnection();
 $tutorialObj = new Tutorial($db);
