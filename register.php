@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 ?>
 
-<?php include __DIR__ . '/.. includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <div class="background-image"></div> <!-- Add background image div -->
