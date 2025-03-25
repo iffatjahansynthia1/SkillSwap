@@ -11,8 +11,6 @@ $tutorialObj = new Tutorial($db);
 $tutorials = $tutorialObj->getAllTutorials();
 ?>
 
-<?php include 'includes/header.php'; ?>
-
 <style>
     body {
         background: linear-gradient(to bottom right, #9b4d96, #f3c8d3); /* Gradient background */
@@ -172,4 +170,4 @@ $tutorials = $tutorialObj->getAllTutorials();
     </div>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+

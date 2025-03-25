@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('/SkillSwap/images/board.jpg') no-repeat center center/cover;
+        background: url('images/board.jpg') no-repeat center center/cover;
         filter: brightness(0.5);
         z-index: -1;
     }
