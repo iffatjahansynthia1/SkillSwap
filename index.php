@@ -145,7 +145,7 @@ $tutorials = $tutorialObj->getAllTutorials();
 
     <div class="button-container">
         <a href="login.php" class="btn">Login</a>
-        <a href="home.php" class="btn">Home</a>
+        <a href="users.php" class="btn">My Account</a>
         <a href="register.php" class="btn">Register</a>
     </div>
 
