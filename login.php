@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <?php include 'includes/header.php'; ?>
-
 <main>
     <div class="background-image"></div>
     <div class="login-container">
@@ -37,20 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="password" name="password" placeholder="Enter Password Here" required>
             <button type="submit">Login</button>
         </form>
-        <p class="signup">Don't have an account? <a href="signup.php">Sign up here</a></p>
-        <div class="social-login">
-            <p>Or login with:</p>
-            <div class="icon-container">
-                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-            </div>
-        </div>
+        <p class="signup">Don't have an account? <a href="register.php">Sign up here</a></p>
     </div>
 </main>
-
+<?php include 'includes/footer.php'; ?>
 <style>
     * {
         margin: 0;
@@ -58,9 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         box-sizing: border-box;
     }
     body {
-        font-family: Arial, sans-serif;
-        color: #fff;
-        overflow: hidden;
+		font-family: Arial, sans-serif;
+		color: #fff;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 0;
     }
     .background-image {
         position: fixed;
@@ -72,8 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         filter: brightness(0.5);
         z-index: -1;
     }
+	main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
     .login-container {
-        position: absolute;
+		position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -124,25 +124,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     .signup a:hover {
         text-decoration: underline;
     }
-    .social-login {
+	footer {
+        background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
-        margin-top: 15px;
-    }
-    .icon-container {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-    }
-    .icon-container a {
-        color: white;
-        font-size: 40px;
-        transition: color 0.3s ease;
-    }
-    .icon-container a:hover {
-        color: orange;
+        padding: 10px;
+        color: #fff;
     }
 </style>
-
-<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
-<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule></script>
