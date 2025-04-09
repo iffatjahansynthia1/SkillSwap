@@ -5,9 +5,11 @@ error_reporting(E_ALL);
 session_start();
 require_once 'includes/db.php';
 require_once 'classes/Tutorial.php';
+require_once 'classes/RatingComment.php';
 
 $db = (new Database())->getConnection();
 $tutorialObj = new Tutorial($db);
+$ratingCommentObj = new RatingComment($db);
 $tutorials = $tutorialObj->getAllTutorials();
 ?>
 
@@ -129,6 +131,39 @@ $tutorials = $tutorialObj->getAllTutorials();
         color: #bbb;
     }
 
+    .tutorial-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px 15px;
+        align-items: center;
+    }
+
+    .rating-display {
+        display: flex;
+        align-items: center;
+        color: #ffeb3b;
+        font-weight: bold;
+    }
+
+    .rating-display .stars {
+        margin-right: 5px;
+        font-size: 1.2rem;
+    }
+
+    .view-btn {
+        background-color: #2196F3;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .view-btn:hover {
+        background-color: #0b7dda;
+        transform: scale(1.05);
+    }
+
     @media (max-width: 768px) {
         h1 {
             font-size: 2.5rem;
@@ -144,13 +179,28 @@ $tutorials = $tutorialObj->getAllTutorials();
     <h1>Welcome to Skill-Swap Tutorials</h1>
 
     <div class="button-container">
-        <a href="login.php" class="btn">Login</a>
-        <a href="users.php" class="btn">My Account</a>
-        <a href="register.php" class="btn">Register</a>
+        <?php if(isset($_SESSION['user_id'])): ?>
+            <a href="users.php" class="btn">My Account</a>
+            <a href="logout.php" class="btn">Logout</a>
+        <?php else: ?>
+            <a href="login.php" class="btn">Login</a>
+            <a href="register.php" class="btn">Register</a>
+        <?php endif; ?>
     </div>
 
     <div class="tutorial-container">
         <?php foreach($tutorials as $index => $tutorial): ?>
+            <?php 
+                // Get average rating for each tutorial
+                $rating = $ratingCommentObj->getAverageRating($tutorial['tutorial_id']);
+                $rating_display = $rating ? $rating : "N/A";
+                
+                // Create star display based on rating
+                $full_stars = floor($rating);
+                $half_star = ($rating - $full_stars) >= 0.5;
+                $empty_stars = 5 - $full_stars - ($half_star ? 1 : 0);
+                $stars = str_repeat('★', $full_stars) . ($half_star ? '½' : '') . str_repeat('☆', $empty_stars);
+            ?>
             <div class="tutorial">
                 <?php
                     $images = ['images/desktop.jpg', 'images/white.jpg', 'images/watercolor.jpg'];
@@ -165,9 +215,14 @@ $tutorials = $tutorialObj->getAllTutorials();
                         <p><strong>Created:</strong> <?php echo htmlspecialchars($tutorial['created_at']); ?></p>
                     </div>
                 </div>
+                <div class="tutorial-footer">
+                    <div class="rating-display">
+                        <span class="stars"><?php echo $stars; ?></span>
+                        <span><?php echo $rating_display; ?>/5</span>
+                    </div>
+                    <a href="view_tutorial.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" class="view-btn">View Tutorial</a>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
 </main>
-
-

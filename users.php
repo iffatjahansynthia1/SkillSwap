@@ -31,14 +31,17 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     </div>
 
     <h2>My Tutorials</h2>
-    <a href="create_tutorials.php">Create New Tutorial</a>
+    <a href="create_tutorials.php" class="btn">Create New Tutorial</a>
     <?php if(count($selfTutorials) > 0): ?>
         <?php foreach($selfTutorials as $tutorial): ?>
             <div class="tutorial">
                 <h3><?php echo htmlspecialchars($tutorial['title']); ?></h3>
                 <p><?php echo htmlspecialchars($tutorial['description']); ?></p>
-                <a href="edit_tutorials.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>">Edit</a>
-                <a href="delete_tutorial.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                <div class="tutorial-actions">
+                    <a href="view_tutorial.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" class="btn">View</a>
+                    <a href="edit_tutorials.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" class="btn">Edit</a>
+                    <a href="delete_tutorial.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" class="btn delete" onclick="return confirm('Are you sure?')">Delete</a>
+                </div>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
@@ -52,12 +55,43 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
                 <h3><?php echo htmlspecialchars($tutorial['title']); ?></h3>
                 <p><?php echo htmlspecialchars($tutorial['description']); ?></p>
                 <p><strong>Author:</strong> <?php echo htmlspecialchars($tutorial['author']); ?></p>
-                <!-- You could add links for rating or commenting here -->
+                <div class="tutorial-actions">
+                    <a href="view_tutorial.php?tutorial_id=<?php echo $tutorial['tutorial_id']; ?>" class="btn">View Details</a>
+                    <a href="chat.php?receiver_id=<?php echo $tutorial['user_id']; ?>" class="btn">Contact Author</a>
+                </div>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
         <p>No tutorials available.</p>
     <?php endif; ?>
 </main>
+
+<style>
+    .tutorial-actions {
+        margin-top: 15px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        background: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .btn:hover {
+        background: #45a049;
+    }
+    
+    .btn.delete {
+        background: #f44336;
+    }
+    
+    .btn.delete:hover {
+        background: #d32f2f;
+    }
+</style>
 
 <?php include 'includes/footer.php'; ?>
