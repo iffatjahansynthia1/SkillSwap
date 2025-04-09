@@ -28,6 +28,7 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     <div class="profile">
         <p><strong>Name:</strong> <?php echo htmlspecialchars($userProfile['name']); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($userProfile['email']); ?></p>
+		<p><strong>Role:</strong> <?php echo htmlspecialchars($userProfile['role']); ?></p>
     </div>
 
     <h2>My Tutorials</h2>
