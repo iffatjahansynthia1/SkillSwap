@@ -43,7 +43,8 @@ class RatingComment {
         $stmt->bindParam(':tutorial_id', $tutorial_id);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return round($result['average_rating'], 2);
+        $average = $result['average_rating'];
+		return $average !== null ? round($average, 2) : 0.0;
     }
 
     // Get comments for a tutorial
