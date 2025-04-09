@@ -44,7 +44,7 @@ class RatingComment {
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $average = $result['average_rating'];
-		return $average !== null ? round($average, 2) : 0.0;
+	return $average !== null ? round($average, 2) : 0.0;
     }
 
     // Get comments for a tutorial
