@@ -121,6 +121,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     </div>
 </main>
 
+<?php include 'includes/footer.php'; ?>
+
 <style>
     .tutorial-view {
         max-width: 800px;
@@ -244,6 +246,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         color: #777;
         font-size: 0.9em;
     }
+	footer {
+		background-color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 10px;
+		color: #fff;
+	}
 </style>
-
-<?php include 'includes/footer.php'; ?>
