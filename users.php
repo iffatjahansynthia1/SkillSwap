@@ -22,7 +22,6 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
 ?>
 
 <?php include 'includes/header.php'; ?>
-
 <main>
     <h1>My Account</h1>
     <div class="profile">
@@ -66,6 +65,7 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
         <p>No tutorials available.</p>
     <?php endif; ?>
 </main>
+<?php include 'includes/footer.php'; ?>
 
 <style>
     .tutorial-actions {
@@ -93,6 +93,10 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     .btn.delete:hover {
         background: #d32f2f;
     }
+	footer {
+		background-color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 10px;
+		color: #fff;
+	}
 </style>
-
-<?php include 'includes/footer.php'; ?>
