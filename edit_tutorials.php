@@ -55,3 +55,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
+<style>
+	footer {
+		background-color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 10px;
+		color: #fff;
+	}
+</style>
