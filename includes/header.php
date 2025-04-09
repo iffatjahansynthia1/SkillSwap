@@ -17,7 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
       <?php if(isset($_SESSION['user_id'])): ?>
           <a href="users.php">My Account</a>
           <?php if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'): ?>
-              <a href="admin.php">Admin</a>
+              <a href="admin.php">Admin Panel</a>
           <?php endif; ?>
           <a href="logout.php">Logout</a>
       <?php else: ?>
