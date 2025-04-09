@@ -15,7 +15,7 @@ $users = $adminObj->getAllUsers();
 $tutorials = $adminObj->getAllTutorials();
 ?>
 
-<?php include __DIR__ . '/..includes/header.php'; ?>
+<?php include __DIR__ . '/includes/header.php'; ?>
 
 <main>
     <h1>Admin Dashboard</h1>
