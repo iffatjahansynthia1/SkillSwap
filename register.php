@@ -105,4 +105,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     button:hover {
         background-color: #45a049;
     }
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+    }
 </style>
