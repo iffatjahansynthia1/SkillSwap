@@ -13,6 +13,31 @@ $ratingCommentObj = new RatingComment($db);
 $tutorials = $tutorialObj->getAllTutorials();
 ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
     body {
         background: linear-gradient(to bottom right, #9b4d96, #f3c8d3); /* Gradient background */

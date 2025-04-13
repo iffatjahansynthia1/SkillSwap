@@ -99,4 +99,56 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
 		padding: 10px;
 		color: #fff;
 	}
+
+    body {
+        background-image: url('pexels-dani.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        color: #fff; /* Makes text readable on dark backgrounds */
+    }
+
+    main {
+        background-color: rgba(0, 0, 0, 0.6); /* Optional: adds contrast for readability */
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    .tutorial-actions {
+        margin-top: 15px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        background: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .btn:hover {
+        background: #45a049;
+    }
+    
+    .btn.delete {
+        background: #f44336;
+    }
+    
+    .btn.delete:hover {
+        background: #d32f2f;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+    }
 </style>
+
