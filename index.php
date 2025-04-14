@@ -40,7 +40,7 @@ $tutorials = $tutorialObj->getAllTutorials();
 
 <style>
     body {
-        background: linear-gradient(to bottom right, #9b4d96, #f3c8d3); /* Gradient background */
+        background: linear-gradient(to bottom right,rgb(233, 193, 13), #f3c8d3); /* Gradient background */
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
