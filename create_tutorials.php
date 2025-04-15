@@ -89,15 +89,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     .background-layer:nth-child(1) {
-        background-image: url('../images/pexels-dani.jpg');
+        background-image: url('images/pexels-dani.jpg');
         animation-delay: 0s;
     }
     .background-layer:nth-child(2) {
-        background-image: url('../images/pexels-katl.jpg');
+        background-image: url('images/pexels-katl.jpg');
         animation-delay: 8s;
     }
     .background-layer:nth-child(3) {
-        background-image: url('../images/pexels-nic.jpg');
+        background-image: url('images/pexels-nic.jpg');
         animation-delay: 16s;
     }
 
@@ -185,15 +185,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 </div>
 
 
-
-
-
-
-
-
-
-
-
 <style>
     * {
         margin: 0;
@@ -217,7 +208,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('images/pexels-atypi.jpg') no-repeat center center/cover;
+        background: url('images/pexels.jpg') no-repeat center center/cover;
         filter: brightness(0.5);
         z-index: -1;
     }

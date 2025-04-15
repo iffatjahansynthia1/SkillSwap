@@ -101,7 +101,7 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
 	}
 
     body {
-        background-image: url('pexels-dani.jpg');
+        background-image: url('images/pexels-dani.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -154,7 +154,7 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     body {
     margin: 0;
     padding: 0;
-    background: url('pexels-dani.jpg') no-repeat center center fixed;
+    background: url('images/pexels-dani.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     color: #fff;
@@ -201,15 +201,15 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     }
 
     .background-layer:nth-child(1) {
-        background-image: url('pexels-atypi.jpg');
+        background-image: url('images/pexels-atypi.jpg');
         animation-delay: 0s;
     }
     .background-layer:nth-child(2) {
-        background-image: url('pexels-katl.jpg');
+        background-image: url('images/pexels-katl.jpg');
         animation-delay: 10s;
     }
     .background-layer:nth-child(3) {
-        background-image: url('pexels-nic.jpg');
+        background-image: url('images/pexels-nic.jpg');
         animation-delay: 20s;
     }
 
@@ -330,12 +330,12 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     }
 
     body::before {
-        background-image: url('pexels-atypi.jpg');
+        background-image: url('images/pexels-atypi.jpg');
         animation-delay: 0s;
     }
 
     body::after {
-        background-image: url('pexels-katl.jpg');
+        background-image: url('images/pexels-katl.jpg');
         animation-delay: 15s;
     }
 
@@ -431,15 +431,15 @@ $otherTutorials = array_filter($allTutorials, function($tutorial) {
     }
 
     .background-layer:nth-child(1) {
-        background-image: url('pexels-atypi.jpg'); /* Ensure the path is correct */
+        background-image: url('images/pexels-atypi.jpg'); /* Ensure the path is correct */
         animation-delay: 0s;
     }
     .background-layer:nth-child(2) {
-        background-image: url('pexels-katl.jpg'); /* Ensure the path is correct */
+        background-image: url('images/pexels-katl.jpg'); /* Ensure the path is correct */
         animation-delay: 10s;
     }
     .background-layer:nth-child(3) {
-        background-image: url('pexels-nic.jpg'); /* Ensure the path is correct */
+        background-image: url('images/pexels-nic.jpg'); /* Ensure the path is correct */
         animation-delay: 20s;
     }
 
